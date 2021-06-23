@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quan Ly Nhan Vien API</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 my-3">
+                <div class="card h-100 p-3">
+                    <div class="card-title">
+                        <h3>Quản Lý Nhân Viên</h3>
+                    </div>
+                    <div class="card-content">
+                        <form action="">
+                            <div class="form-group mb-2">
+                                <label for="maNhanVien">Mã Nhân Viên:</label>
+                                <input type="text" id="maNhanVien" class="form-control">
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="tenNhanVien">Tên Nhân Viên:</label>
+                                <input type="text" id="tenNhanVien" class="form-control">
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="selectExapmle">Chức Vụ:</label>
+                                <select name="" id="selectExample" class="form-select">
+                                    <option value="1">Nhân Viên</option>
+                                    <option value="2">Quản Lý</option>
+                                    <option value="3" selected>Giám Đốc</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="luongCoban">Lương Cơ Bản:</label>
+                                <input type="text" id="luongCoban" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="soGioLam">Số Giờ Làm Trong Tháng:</label>
+                                <input type="text" id="soGioLam" class="form-control">
+                            </div>
+                        </form>
+                        <button class="btn btn-primary" id="confirm">Confirm</button>
+                        <button class="btn btn-warning" id="update">Update</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 my-3">
+                <div class="card h-100 p-3">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="h-100">
+                                <label for="selectCity">Thành Phố:</label>
+                                <select name="" id="selectCity" class="form-select">
+                                    <option value="1" selected>Hà Nội</option>
+                                    <option value="2">Hồ Chí Minh</option>
+                                    <option value="3">Đà Nẵng</option>
+                                    <option value="4">Nha trang</option>
+                                    <option value="5">Huế</option>
+                                    <option value="6">Bình Thuận</option>
+                                </select>
+                                <div class="card py-5 mt-3 align-items-center">
+                                    <div>
+                                        <span style="font-size: 30px;" id="temp"></span>
+                                        <span style="font-size: 30px;"><b>&#8451;</b></span>
+                                    </div>
+                                    <div id="description"></div>
+                                    <div id="city"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-3">
+                <div class="card h-100 p-1">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="table-primary">
+                                <th>Mã Nhân Viên</th>
+                                <th>Tên Nhân Viên</th>
+                                <th>Chức Vụ</th>
+                                <th>Lương Cơ Bản</th>
+                                <th>Tổng Lương</th>
+                                <th>Giờ làm / tháng</th>
+                                <th>Xếp Loại Nhân Viên</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+    <script src="./js/model.js"></script>
+    <script src="./js/action.js"></script>
+    <script src="./js/weather.js"></script>
+
+</body>
+
+</html>
