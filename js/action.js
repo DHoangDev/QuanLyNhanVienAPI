@@ -23,10 +23,10 @@ document.getElementById('confirm').onclick = (e) => {
     vali &= validation.kiemTraTatCaKyTu(Nhanvien.tenNhanVien,'#error_allletter_tenNhanVien','Tên nhân viên');
       
       //Kiểm tra giới hạn nhập
-    vali &= validation.kiemTraGiaTri(Nhanvien.maNhanVien,'#error_min_max_value_maNhanVien',4,6,'Mã nhân viên')
+   
     vali &= validation.kiemTraGiaTri(Nhanvien.luongCoBan,'#error_min_max_value_luongCoBan',1000000,6000000,'Lương cơ bản')     
     vali &= validation.kiemTraGiaTri(Nhanvien.gioLamTrongThang,'#error_min_max_value_soGioLam',50,150,'Số giờ làm trong tháng') 
-   
+    vali &= validation.kiemTraDoDai(Nhanvien.maNhanVien,'#error_min_max_value_maNhanVien',4,6,'Mã nhân viên')
     if(!vali){
         return;
     }
@@ -55,7 +55,7 @@ document.getElementById('update').onclick = (e) => {
     vali &= validation.kiemTraTatCaKyTu(Nhanvien.tenNhanVien,'#error_allletter_tenNhanVien','Tên nhân viên');
       
       //Kiểm tra giới hạn nhập
-    vali &= validation.kiemTraGiaTri(Nhanvien.maNhanVien,'#error_min_max_value_maNhanVien',4,6,'Mã nhân viên')
+    vali &= validation.kiemTraDoDai(Nhanvien.maNhanVien,'#error_min_max_value_maNhanVien',4,6,'Mã nhân viên')
     vali &= validation.kiemTraGiaTri(Nhanvien.luongCoBan,'#error_min_max_value_luongCoBan',1000000,6000000,'Lương cơ bản')     
     vali &= validation.kiemTraGiaTri(Nhanvien.gioLamTrongThang,'#error_min_max_value_soGioLam',50,150,'Số giờ làm trong tháng') 
    
