@@ -26,10 +26,14 @@
                             <div class="form-group mb-2">
                                 <label for="maNhanVien">Mã Nhân Viên:</label>
                                 <input type="text" id="maNhanVien" class="form-control">
+                                <p class="text text-danger" id="error_required_maNhanVien"></p>
+                                <p class="text text-danger" id="error_allnumber_maNhanVien"></p>
+                                <p class="text text-danger" id="error_min_max_value_maNhanVien"></p>  
                             </div>
                             <div class="form-group mb-2">
                                 <label for="tenNhanVien">Tên Nhân Viên:</label>
                                 <input type="text" id="tenNhanVien" class="form-control">
+                            <p class="text text-danger" id="error_allletter_tenNhanVien"></p>
                             </div>
                             <div class="form-group mb-2">
                                 <label for="selectExapmle">Chức Vụ:</label>
@@ -42,10 +46,14 @@
                             <div class="form-group mb-2">
                                 <label for="luongCoban">Lương Cơ Bản:</label>
                                 <input type="text" id="luongCoban" class="form-control">
+                            <p class="text text-danger" id="error_allnumber_luongCoBan"></p>
+                            <p class="text text-danger" id="error_min_max_value_luongCoBan"></p>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="soGioLam">Số Giờ Làm Trong Tháng:</label>
                                 <input type="text" id="soGioLam" class="form-control">
+                            <p class="text text-danger" id="error_allnumber_soGioLam"></p>
+                            <p class="text text-danger" id="error_min_max_value_soGioLam"></p>
                             </div>
                         </form>
                         <button class="btn btn-primary" id="confirm">Confirm</button>
@@ -124,6 +132,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
     <script src="./js/model.js"></script>
+    <script src="./js/validation.js"></script>
     <script src="./js/axios.js"></script>
     <script src="./js/action.js"></script>
     <script src="./js/weather.js"></script>
